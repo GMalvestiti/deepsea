@@ -71,7 +71,9 @@ java {
 }
 
 shadowJar {
-    archiveClassifier.set("shadowed")
+    archiveClassifier.set("")
+
+    configurations = [project.configurations.runtimeClasspath]
 
     dependencies {
         include(dependency("com.github.ben-manes.caffeine:caffeine"))
@@ -80,11 +82,9 @@ shadowJar {
     relocate("com.github.benmanes.caffeine", "${project.maven_group}.shaded.caffeine")
 }
 
-//remapJar {
-//    dependsOn shadowJar
-//
-//    inputFile.set(shadowJar.archiveFile)
-//}
+build {
+    dependsOn(shadowJar)
+}
 
 jar {
     from("LICENSE") {
