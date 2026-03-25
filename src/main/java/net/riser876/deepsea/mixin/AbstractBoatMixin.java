@@ -47,7 +47,7 @@ public class AbstractBoatMixin {
         if (boat.level().isClientSide()
                 || !boat.isVehicle()
                 || !boat.isInWater()
-                || !boat.getType().is(DeepSeaTags.DEEP_SEA_BOAT)) {
+                || !boat.is(DeepSeaTags.DEEP_SEA_BOAT)) {
             return;
         }
 
@@ -55,7 +55,7 @@ public class AbstractBoatMixin {
         ChunkPos chunkPos = boat.chunkPosition();
 
         final ChunkBiomeKey cacheKey = new ChunkBiomeKey(
-                chunkPos.toLong(),
+                chunkPos.pack(),
                 level.dimension().identifier()
         );
 
