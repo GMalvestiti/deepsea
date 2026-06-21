@@ -88,7 +88,6 @@ shadowJar {
 
 remapJar {
     dependsOn shadowJar
-
     inputFile.set(shadowJar.archiveFile)
 }
 
