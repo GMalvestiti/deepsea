@@ -5,7 +5,9 @@
 ## Compatibility
 
 - **Required:** [Fabric API](https://modrinth.com/mod/fabric-api)
-- **Made to work with:** [Small Ships](https://modrinth.com/mod/small-ships)
+- **Made to Work With:**
+  - [Small Ships](https://modrinth.com/mod/small-ships)
+  - [Shippy Ships](https://modrinth.com/mod/shippy-ships)
 
 > By default, only `#c:boats` is included in the `#deepsea:boat` tag and `#c:is_ocean` in the `#deepsea:ocean`.
 
